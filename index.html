@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>examen javascrip</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <table id="miTabla" class="table">
+        <tr>
+            <th>Columna 1</th>
+            <th>columna 2</th>
+            <th>columna 3</th>
+        </tr>
+        <tr id="filacolor">
+            <td>Carol</td>
+            <td>Vallejos</td>
+            <td>
+                <button onclick="cambiarColor(this)">Botón 1</button>
+                <button onclick="clicEnlace2()">Botón 2</button>
+                <button onclick="mostrarContenido()">Botón 3</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Contenido 4</td>
+            <td>Contenido 5</td>
+            <td>Contenido 6</td>
+        </tr>
+
+        <th><a id="enlace1" href="#">Enlace 1</a>
+       </th>
+   <th> <a id="enlace2" href="enlace2.html">Enlace 2</a>
+   </th>
+
+
+    </table>
+
+    
+    <script>
+        function cambiarColor(boton) {
+            var fila = document.getElementById("filacolor");
+            var primerEnlace = document.getElementById("enlace1");
+
+            fila.style.backgroundColor = "orange";
+            primerEnlace.style.backgroundColor = "orange";
+            
+        var enlace1 = document.getElementById("enlace3");
+        enlace3.style.backgroundColor = "purple";
+        }
+
+        function clicEnlace2() {
+            var enlace2 = document.getElementById("enlace2");
+            enlace2.click();
+        }
+
+        function mostrarContenido() {
+            var primeraCasilla = document.getElementById("miTabla").rows[0].cells[0];
+            console.log(primeraCasilla.textContent);
+        }
+
+  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
